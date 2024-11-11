@@ -1,0 +1,1059 @@
+/* General reset and styling for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+/* Body styling: background color and text color */
+body {
+  color: #fff;
+  background: #1b1f24;
+  overflow-x: hidden;
+}
+
+/* Header styling: sticky positioning and layout */
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 16%;
+  background: #1b1f24;
+  transition: all .50s ease;
+}
+
+/* Header sticky class for when the user scrolls */
+header.sticky {
+  background: #1b1f24;
+  box-shadow: 0 .1rem 1rem rgba(0,0,0,.2);
+  padding: 16px 16%;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 600;
+}
+
+span {
+  color: #ff1333;
+}
+
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navigation link styling */
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #c3cad5;
+  margin-left: 40px;
+  transition: all .50s ease;
+}
+
+/* Hover effect for navigation links */
+.navlist a:hover {
+  color: #ff1333;
+  text-shadow: 3px 3px 20px #ff1333, -2px 1px 30px #fff;
+}
+
+/* Menu icon for smaller screens (hidden by default) */
+#menu-icon {
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+/* Button styling for header actions */
+.h-btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: transparent;
+  color: #ff1333;
+  border: 2px solid #ff1333;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .50s ease;
+}
+
+/* Hover effect for buttons */
+.h-btn:hover {
+  background: #ff1333;
+  color: #1b1f24;
+  box-shadow: 0 0 20px #ff1333;
+  transform: scale(1.1);
+}
+
+/* Home image styling: circular shape with a glowing circle */
+.home-img {
+  width: 50vw; 
+  height: 50vw; 
+  max-width: 510px; 
+  max-height: 510px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Glowing circle effect around the home image */
+.home-img .glowing-circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the glowing circle's inner effect */
+.home-img .glowing-circle::after {
+  content: '';
+  position: absolute;
+  width: 94%;
+  height: 94%;
+  background: #1b1f24;
+  border-radius: 50%;
+}
+
+/* Styling for the actual glowing circle around the image */
+.glowing-circle span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff1333;
+  border-radius: 50%;
+  border-bottom-left-radius: 20%;
+  z-index: 0;
+}
+
+/* Image within the glowing circle */
+.glowing-circle .image {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.glowing-circle .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image img {
+  position: absolute;
+  top: 30px;
+  left: 55%;
+  transform: translateX(-50%);
+  max-width: 450px;
+  object-fit: cover;
+}
+
+.main-content {
+  margin-left: 60px;
+}
+/* Main content styling: headings and paragraphs */
+.main-content h4 {
+  font-size: 1.6rem;
+}
+
+.main-content h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 20px 0px 20px;
+  line-height: 1.2;
+}
+
+.main-content p {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 620px;
+  max-width: 100%;
+  color: #c3cad5;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+/* Social media icon styling */
+.social {
+  margin-bottom: 40px;
+}
+
+.social i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #ff1333;
+  border-radius: 50%;
+  backdrop-filter: brightness(88%);
+  font-size: 20px;
+  margin-right: 17px;
+  box-shadow: 0 0 20px transparent;
+  cursor: pointer;
+  transition: all .50s ease;
+}
+
+/* Hover effect for social media icons */
+.social i:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff1333;
+}
+
+/* Primary button styling */
+.btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: #ff1333;
+  color: #1b1f24;
+  border: 2px solid #ff1333;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .50s ease;
+}
+
+/* Hover effect for primary buttons */
+.btn:hover {
+  background: transparent;
+  color: #ff1333;
+  box-shadow: 0 0 20px #ff1333;
+}
+
+/* Secondary button styling */
+.btn2 {
+  background: transparent;
+  color: #ff1333;
+  border: 2px solid #ff1333;
+  margin-left: 15px;
+  margin-right: 12px;
+  transition: all .50s ease;
+}
+
+/* Hover effect for secondary buttons */
+.btn2:hover {
+  background: #ff1333;
+  color: #1b1f24;
+}
+
+/*Styling for About sections */
+.about{ 
+  background: #22282f;
+  gap: 2.5rem;
+}
+
+/* Heading styles for various sections like About, Project, Testimonials */
+.about h2, .project h2, .testimonials h2, .contact h2{
+  font-size: 46.4px;
+  text-align: center;  
+}
+
+/* Paragraph styling for About section */
+.about p {
+ text-align: center;
+ padding: 40px 0;
+ line-height: 30px;
+ color: #c3cad5;
+}
+
+/* Flexbox layout for skills section */
+.box-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+/* Styling individual skill items */
+.box-skills p {
+ text-align: left;
+ padding: 12px;
+ font-size: 20px;
+ color: #fff;
+ font-weight: 600;
+ line-height: normal;
+}
+
+/* Span styling inside skill items */
+.box-skills span {
+  font-size: 16px;
+}
+
+/* Styling for numbered boxes */
+#box-num {
+  display: flex;
+  border: 2px solid #ff1333;
+  align-items: center;
+  border-radius: 28px;
+  width: 100%;
+  margin: 0 8px;
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+/* Hover effect for numbered box */
+#box-num:hover {
+  background: transparent;
+  color: #ff1333;
+  box-shadow: 0 0 20px #ff1333;
+}
+
+#logo1 {
+  width: 40px;
+  height: 40px;
+}
+
+/* Project section styling */
+.project {
+  background: #22282f;
+}
+
+/* Grid layout for portfolio content */
+.Portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+  align-items: center;
+  gap: 2.3rem;
+  margin-top: 4.2rem;
+}
+
+/* Image styling in project rows */
+.row img {
+  height: auto;
+  width: 100%;
+  border-radius: 28px;
+  margin-bottom: 1.4rem;
+}
+
+/* Styling for project row */
+.row {
+  background: #2d343f;
+  border-radius: 28px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px #ff1333;
+  padding: 20px;
+  transition: all .50s ease;
+}
+
+/* Flex layout for content inside a row */
+.main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+/* Row heading styling */
+.row h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #c3cad5;
+}
+
+/* Icon styling inside row */
+.row i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  font-size: 27px;
+  border-radius: 50%;
+  color: #1b1f24;
+  background: #ff1333;
+}
+
+.row h4 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.row:hover {
+  border: 1px solid #ff1333;
+  transform: translateY(-5px) scale(1.03);
+  cursor: pointer;
+}
+
+/* Testimonials section styling */
+.testimonials {
+  text-align: center;
+}
+
+/* Profile picture styling */
+#pic {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+/* Heading for testimonials section */
+.testimonials h2 {
+  margin-bottom: 40px;
+}
+
+.testimonials h4 {
+  color: #c3cad5;
+  font-size: 1.2rem;
+}
+
+.testimonials p {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Social media icons styling inside testimonials */
+.serv1 i {
+  width: 40px;
+  height: 40px;
+  color: #ff1333;
+  font-size: 20px;
+  margin: 0 6px;
+  border-radius: 50%;
+}
+
+.serv1 i:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff1333;
+}
+
+/* Button styling in testimonials */
+.testimonials button {
+  display: inline-block;
+  width: 100%; 
+  max-width: 200px; 
+  height: 50px;
+  padding: 11px 26px;
+  background: transparent;
+  color: #ff1333;
+  border: 2px solid #ff1333;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .50s ease;
+  margin-top: 12px;
+}
+
+.testimonials button:hover {
+  background: #ff1333;
+  color: #1b1f24;
+  box-shadow: 0 0 20px #ff1333;
+  transform: scale(1.1);
+}
+
+.button-wrapper {
+  display: flex; 
+  justify-content: center;
+}
+
+.serv1 {
+  transition: all .50s ease;
+}
+
+.serv1:hover {
+  transform: translateY(-5px) scale(1.03);
+  cursor: pointer;
+}
+
+/* Grid layout for testimonial section */
+.testimonial-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+/* Section styling for the contact page, with a background image and fixed positioning */
+.contact {
+  background-image: url(img/office.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: top;
+}
+
+/* Styling for the contact form container */
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.2rem;
+}
+
+/* Form styling, with a relative position for form elements */
+.contact-form form {
+  position: relative;
+  width: 600px;
+  text-align: right;
+}
+
+.contact-form input, textarea {
+  font-size: 16px;
+}
+
+/* Styling for the name fields (First name and Last name) section */
+.name-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.first-name, .last-name {
+  width: 48%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.name-fields .input-group {
+  width: 48%;
+}
+
+/* Styling for form labels */
+label {
+  color: #c3cad5;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Styling for input fields and textareas */
+form input,
+form textarea {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px #ff1333;
+  background: #2d343f;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Placeholder text styling */
+form input::placeholder,
+form textarea::placeholder{
+  color: #c3cad5;
+  font-size: 15px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for checkbox inputs */
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px; 
+  height: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.checkbox-group input:hover {
+  color: #ff1333;
+}
+
+/* Changes label color when checkbox is checked */
+.checkbox-group input[type="checkbox"]:checked + label {
+  color: #ff1333;
+}
+
+/* Submit button styling for the contact form */
+form .send-btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: #ff1333;
+  color: #1b1f24;
+  border: 2px solid #ff1333;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .50s ease;
+  width: auto;
+  margin-right: 0;
+}
+
+form .send-btn:hover {
+  background: transparent;
+  color: #ff1333;
+  box-shadow: 0 0 20px #ff1333;
+  cursor: pointer;
+}
+
+/* Footer section styling */
+.footer {
+  padding: 22px 16%;
+  background: #22282f;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Footer title section styling */
+.footer-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #808080;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.footer h2 {
+  white-space: nowrap;
+}
+
+.column-text h4 {
+  padding: 25px 0;
+}
+
+#column4 {
+  padding-bottom: 34px;
+}
+
+.footer a {
+  color: #c3cad5;
+}
+
+/* Footer subscription field layout */
+.footer .field-subscribe {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+/* Styling for subscription input fields */
+.footer .field-subscribe input {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px #ff1333;
+  background: #2d343f;
+  color: #fff;
+  border-radius: 8px;
+  margin-right: 6px;
+}
+
+/* Button styling in the footer subscription */
+.footer .field-subscribe button {
+  padding: 15px 26px;
+  background: transparent;
+  color: #ff1333;
+  border: 2px solid #ff1333;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* Hover effect for the subscription button */
+.footer .field-subscribe button:hover {
+  background: #ff1333;
+  color: #1b1f24;
+  box-shadow: 0 0 20px #ff1333;
+  transform: scale(1.1);
+}
+
+.field-subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items:baseline;
+  width: 32%;
+}
+
+/* Footer section with multiple columns */
+.column-section {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 100px;
+  border-bottom: 2px solid #808080;
+  color: #c3cad5;
+  gap: 1rem; 
+}
+
+.column-text {
+  flex: 1;
+  min-width: 150px;
+  padding: 0 10px;
+}
+
+.column-text h4 {
+  padding-bottom: 25px;
+  color: #fff;
+}
+
+.column-text p {
+  line-height: 35px;
+}
+
+.column-text#column4 img {
+  width: 48%;
+  max-width: 320px;
+  height: auto; 
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.column-text#column4 img:hover {
+  transform: scale(1.1);
+}
+
+.img-app {
+  display: flex;
+  gap: 14px;
+}
+
+.last-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.copyright p{
+  font-size: 15px;
+  font-weight: 400;
+  color: #c3cad5;
+  margin-top: 12px;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.scroll-top i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff1333;
+  width: 45px;
+  height: 45px;border-radius: 50%;
+  color: #1b1f24;
+  font-size: 27px;
+}
+
+/* Media Query for screens with a max width of 1700px */
+@media(max-width: 1700px) {
+
+  header {
+    padding: 20px 8%;
+  }
+
+  header.sticky {
+    padding: 14px 8%;
+  }
+
+  section {
+    padding: 90px 8% 80px;
+  }
+
+  .footer {
+    padding: 18px 8%;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+}
+
+/* Media Query for screens with a max width of 1486px */
+@media(max-width: 1486px) {
+
+  .main-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .main-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Media Query for screens with a max width of 1380px */
+@media(max-width:1380px) {
+
+  header {
+      padding: 20px 5%;
+  }
+
+  header.sticky {
+      padding: 14px 5%;
+  }
+
+  section{
+      padding: 90px 5% 80px;
+  }
+
+  .footer {
+      padding: 18px 5%;
+  }
+
+  .hero {
+      height: 90vh;
+      background-position: center;
+  }
+
+  /* Media Query for screens with a max width of 1290px */
+  @media (max-width:1290px) {
+
+    .box {
+        padding: 40px 40px 46px;
+    }
+
+    .box img {
+        width: 100%;
+        height: 60px;
+        max-width: 60px;
+    }
+
+    .box h3 {
+        font-size: 21px;
+    }
+
+    .home-img {
+      max-width: 400px;
+      max-height: 400px;
+    }    
+  }
+  
+  /* Media Query for screens with a max width of 1240px */
+  @media (max-width:1240px) {
+
+    .btn, .btn2 {
+      padding: 11px 18px;
+    }
+      
+    .about {
+      grid-template-columns: 1fr;
+      grid-area: 2rem;
+      text-align: center;
+
+    }
+    .about-img img {
+      text-align: center;
+      width: 100%;
+      height: 400px;
+      max-width: 400px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .box-skills {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .box-skills p {
+      font-size: 28px;
+    }
+
+    .box-skills span {
+      font-size: 18px;
+    }
+
+    .section1 {
+      flex-direction: column;
+    }
+
+    .home-img {
+      max-width: 510px;
+      max-height: 510px;
+      width: 85vw; 
+      height: 85vw; 
+    }    
+
+    #box-num {
+      width: 100%;
+    }
+
+    .about h2, .project h2, .testimonials h2, .contact h2 {
+      font-size: 2.2rem;
+    }
+
+    .testimonial-section {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+
+    #pic {
+      max-width: 250px; 
+    }   
+  }
+
+   /* Media Query for screens with a max width of 1036px */
+  @media(max-width: 1036px) {
+    #menu-icon{
+        display: block;
+    }
+    .navlist, .top-btn {
+        display: none;
+    }
+
+    .navlist a {
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+    .navlist.active {
+        right: 0;
+    }
+  }
+  
+   /* Media Query for screens with a max width of 950px */
+  @media (max-width:950px) {
+
+    .social {
+        margin-bottom: 20px; 
+    }
+
+    .column-text#column4 img {
+      width: 38%;
+      max-width: 300px;
+    }
+
+    .last-section {
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .quick-links {
+      margin: 12px 0;
+    }
+  }
+
+   /* Media Query for screens with a max width of 734.45px */
+  @media(max-width: 734.45px) {
+    .column-text#column4 img {
+      width: 36%;
+      max-width: 130px;
+    }
+  } 
+
+  /* Media Query for screens with a max width of 680px */
+  @media (max-width:680px) {
+
+    .main-content {
+      text-align: center;
+      margin-top: 50px;
+      margin-left: 0;
+    }
+    .main-content p {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .main-content h1 {
+      font-size: 2.4rem;
+    }
+    .main-content h4 {
+      font-size: 1.1rem;
+    }
+
+    .about-skills p {
+      font-size: 0.9rem;
+    }
+
+    #box-num p{
+      font-size: 1.4rem;
+    }
+
+    #box-num span {
+      font-size: 1rem;
+    }
+
+    .name-fields {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .name-fields .input-group {
+      width: 100%; 
+    }
+  
+    .footer-title {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .field-subscribe {
+      margin-top: 40px;
+    }
+
+    .column-section {
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
+  }
+  
+  /* Media Query for screens with a max width of 470px */
+  @media (max-width:470px) {
+
+    .about-img img {
+      text-align: center;
+      width: 100%;
+      height: 300px;
+      max-width: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .main-content h1 {
+      font-size: 1.8rem;
+    }
+
+    .testimonial-section {
+      grid-template-columns: 1fr; 
+    }
+  }
+}
