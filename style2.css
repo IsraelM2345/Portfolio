@@ -86,8 +86,8 @@ span {
 .h-btn {
   display: inline-block;
   padding: 11px 26px;
-  background: transparent;
-  color: #ff1333;
+  background: #ff1333;
+  color: #1b1f24;
   border: 2px solid #ff1333;
   border-radius: 8px;
   font-size: 15px;
@@ -97,10 +97,9 @@ span {
 
 /* Hover effect for buttons */
 .h-btn:hover {
-  background: #ff1333;
-  color: #1b1f24;
+  background: transparent;
+  color: #ff1333;
   box-shadow: 0 0 20px #ff1333;
-  transform: scale(1.1);
 }
 
 /* Home image styling: circular shape with a glowing circle */
